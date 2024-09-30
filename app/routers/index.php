@@ -1,11 +1,14 @@
 <?php
-// ROUTER PRINCIPAL
-// ROUTE DES AUTHORS
-// PATERN: /?authors
-if(isset($_GET['authors'])) :
+
+
+if(isset($_GET['posts'])) :
     
 
 else: 
+// ROUTE PAR DÉFAUT
+// PATTERN: /
+// CTRL: pagesController
+// ACTION: home
 include_once '../app/controllers/pagesController.php';
 \App\Controllers\PagesController\homeAction($connexion);
 endif;
