@@ -18,3 +18,19 @@ function truncate (string $string, int $lg_max = 150):string {
         // Retourner la date formatée au format jj/MM/YYYY
         return $dateTime->format('d/m/Y');
     }
+
+// Fonction pour slugifier une chaine de caractère 
+    function slugify($string){
+    
+        $string = strtolower($string);
+        
+        $string = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+        
+        $string = preg_replace('/[^a-z0-9\s-]/', '', $string);
+        
+        $string = preg_replace('/[\s-]+/', '-', $string);
+        
+        $string = trim($string, '-');
+        
+        return $string;
+}

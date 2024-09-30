@@ -5,7 +5,7 @@ ALEX PARKER - CONSIGNES
 		- Liste des posts du blog triés par date décroissante et limités à 10 :OK
 		- Texte tronqué à 150 caractères :OK
 		- Date formatée :OK
-		- Lien vers le détails d'un post
+		- Lien vers le détails d'un post :EN COURS
 		- Lien vers le formulaire d'ajout d'un post
 
 	2. Détails d'un post

@@ -2,7 +2,7 @@
 
 
 if(isset($_GET['posts'])) :
-    
+    include_once '../app/routers/posts.php';
 
 else: 
 // ROUTE PAR DÉFAUT
