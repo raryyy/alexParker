@@ -20,7 +20,7 @@
                         </h1></a>
                     </div>
                     <div class="post-info">
-                      <span><?php echo \Core\Helpers\formatDate($post['created_at']); ?></span> | <span>Life style</span>
+                      <span><?php echo \Core\Helpers\formatDate($post['created_at']); ?></span> | <span><?php echo $post['category_name']; ?></span>
                     </div>
                     <p>
                     <?php echo \Core\Helpers\truncate($post['text']); ?>
@@ -50,3 +50,20 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-12 page-body margin-top-50 footer">
+              <footer>
+                <ul class="menu-link">
+                  <li><a href="index.html">My Blog</a></li>
+                </ul>
+
+                <p>© Copyright 2016 DevBlog. All rights reserved</p>
+
+                <!-- UiPasta Credit Start -->
+                <div class="uipasta-credit">
+                  Design By
+                  <a href="http://www.uipasta.com" target="_blank">UiPasta</a>
+                </div>
+                <!-- UiPasta Credit End -->
+              </footer>
+            </div>
+            <!-- Footer End -->

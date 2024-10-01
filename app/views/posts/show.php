@@ -26,7 +26,7 @@
 
                     <!-- Post Detail Start -->
                     <div class="post-info">
-                      <span><?php echo $post['created_at']; ?></span> | <span>Life style</span>
+                      <span><?php echo $post['created_at']; ?></span> | <span><?php echo $post['category_name']; ?></span>
                     </div>
                     <!-- Post Detail End -->
 

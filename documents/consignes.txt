@@ -6,10 +6,10 @@ ALEX PARKER - CONSIGNES
 		- Texte tronqué à 150 caractères :OK
 		- Date formatée :OK
 		- Lien vers le détails d'un post :OK
-		- Lien vers le formulaire d'ajout d'un post
+		- Lien vers le formulaire d'ajout d'un post :OK
 
 	2. Détails d'un post
-		- title, text, categorie et quote du post :Manque catégorie
+		- title, text, categorie et quote du post :OK
 		- lien pour la modification et la suppression du post
 
 	3. Formulaire d'ajout et de modification d'un post
