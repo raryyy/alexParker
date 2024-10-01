@@ -2,6 +2,7 @@
 namespace App\Controllers\PostsController;
 
 use \PDO, \App\Models\PostsModel;
+include_once '../app/models/postsModel.php';
 
 function showAction(PDO $connexion, int $id){
 
@@ -24,3 +25,20 @@ function createFormAction(PDO $connexion){
     $content = ob_get_clean();
 
 }
+
+function deleteAction(PDO $connexion, int $id){
+    include_once '../app/models/postsModel.php';
+    $return = PostsModel\deleteById($connexion, $id);
+        header('location:'. BASE_HREF);
+        exit;
+}
+
+function addAction(PDO $connexion, array $data)
+{
+    $id = PostsModel\addOne($connexion, $data);
+    header('location:'. BASE_HREF);
+}
+
+
+
+

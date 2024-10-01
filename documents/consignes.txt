@@ -10,7 +10,7 @@ ALEX PARKER - CONSIGNES
 
 	2. Détails d'un post
 		- title, text, categorie et quote du post :OK
-		- lien pour la modification et la suppression du post
+		- lien pour la modification et la suppression du post :suppression ok modification En cours....
 
 	3. Formulaire d'ajout et de modification d'un post
 		- title, text, image, categorie et quote du post
@@ -18,7 +18,7 @@ ALEX PARKER - CONSIGNES
 LA LISTE DES CATEGORIES DANS LE MENU
 	Ajouter la liste des catégories dans la colonne de gauche (présente sur chaque page)
 	Vous ne devez pas activer ces liens, juste les afficher !!!
-	(Pas de routes pour les catégories)
+	(Pas de routes pour les catégories) :OK
 
 BONUS: 
 	- afficher le nombre de posts pour chaque catégorie dans la liste des catégories
@@ -27,12 +27,15 @@ BONUS:
 
 
 ROUTES
+
+Ok
 	ROUTE PAR DEFAUT: liste des posts
 		PATTERN: /
 		CTRL: ???
 		ACTION: ???
 		TITLE: Alex Parker - Blog
 
+OK
 	ROUTE DU DETAIL D'UN POST
 			PATTERN: /posts/id/slug-du-post.html
 			URL: ???
@@ -40,12 +43,14 @@ ROUTES
 			ACTION: ???
 			TITLE: Alex Parker - Title du post
 
+OK
 	ROUTE D'AJOUT D'UN POST: affichage du formulaire
 			PATTERN: /posts/add/form.html
 			CTRL: ???
 			ACTION: ???
 			TITLE: Alex Parker - Add a post
 
+OK
 	ROUTE D'AJOUT D'UN POST: INSERT
 			PATTERN: /posts/add/insert.html
 			CTRL: ???
@@ -64,6 +69,7 @@ ROUTES
 			ACTION: ???
 			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST
 
+OK
 	ROUTE DE SUPPRESSION D'UN POST:
 			PATTERN: /posts/id/slug-du-post/delete.html
 			CTRL: ???

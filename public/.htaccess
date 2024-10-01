@@ -8,13 +8,29 @@ RewriteEngine on
 # ROUTE DU DETAIL D'UN POST
 # PATTERN: /posts/id/slug-du-post.html
 # URL: index.php?books=show&id=xxx
+
 # --------------------------------------------------------------------------
+
 RewriteRule ^posts/([1-9][0-9]*)/([a-z\-]+)\.html$ index.php?posts=show&id=$1 [L]
+
 # -----------------------------------------------------------------------------
+
+
 # ROUTE D'AJOUT D'UN POST: affichage du formulaire
 # PATTERN: /posts/add/form.html
 # URL: index.php?posts=form
+
 RewriteRule ^posts/add/form.html$ index.php?posts=form [L]
+
+# -----------------------------------------------------------------------------
+	# ROUTE D'AJOUT D'UN POST: INSERT
+	# PATTERN: /posts/add/insert.html
+RewriteRule ^posts/add/insert.html$ index.php?posts=add [L]
+# -----------------------------------------------------------------------------
+
+# ROUTE DE SUPPRESSION D'UN POST:
+# PATTERN: /posts/id/slug-du-post/delete.html
+RewriteRule ^posts/([1-9][0-9]*)/([a-z\-]+)/delete.html$ index.php?posts=delete&id=$1 [L]
 
 
 # -----------------------------------------------------------------------
