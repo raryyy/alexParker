@@ -4,7 +4,7 @@
                 <div class="col-md-12 content-page">
                   <!-- ADD A POST -->
                   <div>
-                    <a href="form.html" type="button" class="btn btn-primary"
+                    <a href="posts/add/form.html" type="button" class="btn btn-primary"
                       >Add a Post</a
                     >
                   </div>
@@ -13,8 +13,8 @@
                   <!-- Blog Post Start -->
                   <?php foreach($posts as $post) : ?>
                   <div class="col-md-12 blog-post row">
-                    <div class="<?php echo $post['title']; ?>">
-                      <a href="single.html"
+                    <div class="post-title">
+                      <a href="posts/<?php echo $post['id']; ?>/<?php echo \Core\Helpers\slugify($post['title']) ?>.html"
                         ><h1>
                         <?php echo $post['title']; ?>
                         </h1></a>

@@ -11,7 +11,12 @@ RewriteEngine on
 # --------------------------------------------------------------------------
 RewriteRule ^posts/([1-9][0-9]*)/([a-z\-]+)\.html$ index.php?posts=show&id=$1 [L]
 # -----------------------------------------------------------------------------
+# ROUTE D'AJOUT D'UN POST: affichage du formulaire
+# PATTERN: /posts/add/form.html
+# URL: index.php?posts=form
+RewriteRule ^posts/add/form.html$ index.php?posts=form [L]
+
 
 # -----------------------------------------------------------------------
-RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
+RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf|woff|woff2|ttf|svg)$ [NC]
 RewriteRule ^(.*)$ index.php [L]
