@@ -15,7 +15,7 @@
                     <!-- Post Headline End -->
 
                     <!-- Form Start -->
-                    <form action="posts/add/insert.html" method="POST">
+                    <form action="<?php echo BASE_HREF; ?>posts/<?php echo $post['id']; ?>/<?php echo \Core\Helpers\slugify($post['title']); ?>/edit/update.html" method="POST">
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input
@@ -25,6 +25,7 @@
                                 class="form-control"
                                 placeholder="Enter your title here"
                                 required
+                                value="<?php echo $post['title']; ?>"
                             />
                         </div>
                         <div class="form-group">
@@ -36,11 +37,11 @@
                                 rows="5"
                                 placeholder="Enter your text here"
                                 required
-                            ></textarea>
+                            ><?php echo $post['text']; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Image</label>
-                            <input type="file" class="form-control-file btn btn-primary" id="exampleFormControlFile1" name="image">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
                         </div>
                         <div class="form-group">
                             <label for="quote">Quote</label>
@@ -50,23 +51,26 @@
                                 class="form-control"
                                 rows="5"
                                 placeholder="Enter your quote here"
-                            ></textarea>
+                            ><?php echo $post['quote']; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="category">Category</label>
                             <select id="category" name="category_id" class="form-control" required>
-                                <option disabled selected>Select your category</option>
+                                <option disabled>Select your category</option>
                                 <?php 
                                     include_once '../app/models/categoriesModel.php';
                                     $categories = \App\Models\CategoriesModel\findAll($connexion);
-                                    foreach($categories as $categorie): ?>
-                                    <option value="<?php echo $categorie['id']; ?>"><?php echo $categorie['name'] ;?></option>
+                                    foreach ($categories as $categorie): ?>
+                                    <option value="<?php echo $categorie['id']; ?>" 
+                                        <?php echo $post['category_id'] == $categorie['id'] ? 'selected' : ''; ?>>
+                                        <?php echo $categorie['name']; ?>
+                                    </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
                         <div>
-                            <input class="btn btn-primary" type="submit" value="submit" />
-                            <input class="btn btn-secondary" type="reset" value="reset" />
+                            <input class="btn btn-primary" type="submit" value="Submit" />
+                            <input class="btn btn-secondary" type="reset" value="Reset" />
                         </div>
                     </form>
                     <!-- Form End -->

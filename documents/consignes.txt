@@ -10,10 +10,10 @@ ALEX PARKER - CONSIGNES
 
 	2. Détails d'un post
 		- title, text, categorie et quote du post :OK
-		- lien pour la modification et la suppression du post :suppression ok modification En cours....
+		- lien pour la modification et la suppression du post :suppression ok
 
 	3. Formulaire d'ajout et de modification d'un post
-		- title, text, image, categorie et quote du post
+		- title, text, image, categorie et quote du post ok 
 
 LA LISTE DES CATEGORIES DANS LE MENU
 	Ajouter la liste des catégories dans la colonne de gauche (présente sur chaque page)
@@ -56,13 +56,14 @@ OK
 			CTRL: ???
 			ACTION: ???
 			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL
-
+OK
 	ROUTE DE MODIFICATION D'UN POST: Affichage du formulaire
 			PATTERN: /posts/id/slug-du-post/edit/form.html
 			CTRL: ???
 			ACTION: ???
-			TITLE: Alex Parker - Edit a post
+			TITLE: Alex Parker - Edit a
 
+OOK
 	ROUTE DE MODIFICATION D'UN POST: UPDATE
 			PATTERN: /posts/id/slug-du-post/edit/update.html
 			CTRL: ???
